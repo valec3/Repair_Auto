@@ -8,3 +8,7 @@ navToggler.addEventListener("click",()=>{
     navbar.classList.toggle("active");
     navToggler.classList.toggle("active");
 })
+window.addEventListener("scroll",()=>{
+    navToggler.classList.remove("active");
+    navbar.classList.remove("active");
+})
