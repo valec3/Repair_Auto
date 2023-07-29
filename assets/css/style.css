@@ -1,48 +1,260 @@
 /*-----------------------------------*\
-  #style.css
-\*-----------------------------------*/
-
-/**
- * copyright 2022 codewithsadee
- */
-
-
-
-
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
-
-
-
-
-
-/*-----------------------------------*\
-  #RESET
-\*-----------------------------------*/
-
-
-
-
-
-/*-----------------------------------*\
-  #REUSED STYLE
-\*-----------------------------------*/
-
-
-
-
-
-/*-----------------------------------*\
-  #HEADER
+    #style.css
 \*-----------------------------------*/
 
 
 
 
 /*-----------------------------------*\
-  #HERO
+    #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root{
+    --international-orange-engineering: hsl(1, 91%, 37%);
+    --cadet-blue-creyola: hsl(222, 14%, 69%);
+    --oxford-blue-1: hsl(222, 47%, 15%);
+    --oxford-blue-2: hsl(222, 44%, 14%);
+    --oxford-blue-3: hsl(222, 50%, 11%);
+    --sonic-silver: hsl(0, 0%, 44%);
+    --space-cadet: hsl(222, 44%, 18%);
+    --pastel-pink: hsl(1, 53%, 75%);
+    --eerie-black: hsl(0, 0%, 15%);
+    --light-gray: hsl(0, 0%, 80%);
+    --white: hsl(0, 0%, 100%);
+
+    --ff-chakra-petch: 'Chakra Petch', sans-serif;
+    --ff-mulish: 'Mulish', sans-serif;
+
+    --shadow: 0px 0px 100px 0px hsl(216, 9%, 90%);
+    --cubic-out: cubic-bezier(0.05, 0.83, 0.52, 0.97);
+}
+
+
+
+/*-----------------------------------*\
+    #RESET
+\*-----------------------------------*/
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+a,img,span,button{
+    display: block;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+img{
+    height: auto;
+}
+button{
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+address{
+    font-style: normal;
+}
+html{
+    scroll-behavior: smooth;
+    font-size: 10px;
+}
+body{
+    font-family: var(--ff-mulish);
+    color: var(--sonic-silver);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    background-color: var(--eerie-black);
+
+    height: 1800vh;
+}
+
+:focus-visible{
+    outline-offset: 4px;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background: hsl(0, 0%, 98%);
+}
+::-webkit-scrollbar-thumb{
+    background-color: hsl(0, 0%, 80%);
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: hsl(0, 0%, 70%);
+}
+/*-----------------------------------*\
+    #REUSED STYLE
+\*-----------------------------------*/
+
+.container{
+    padding-inline: 1rem;
+}
+.material-symbols-rounded{
+    font-variation-settings: "FILL" 0, "wght" 600, "GRAD" 0,"opsz" 40;
+    font-size: 1em;
+    width: 1em;
+    overflow: hidden;
+}
+.has-bg-image{
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+}
+.section_subtitle{
+    max-width: max-content;
+    font-family: var(--ff-chakra-petch);
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-block-end: 12px;
+    margin-inline: auto ;
+}
+.section_subtitle::before{
+    content: "";
+    display: inline-block;
+    height: 1rem;
+    width: 1.7rem;
+    margin-block-end: -2px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.section_subtitle\:dark{
+    color: var(--white);
+}
+.section_subtitle\:dark::before{
+    background-image: url("../images/text-bars-light.png");
+}
+.section_subtitle\:light{
+    color: var(--international-orange-engineering);
+}
+.section_subtitle\:light::before{
+    background-image: url("../images/text-bars-dark.png");
+}
+
+
+/*-----------------------------------*\
+    #HEADER
+\*-----------------------------------*/
+
+.header .btn{
+    display: none;
+}
+
+.header{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    padding: 2.5rem 1rem;
+    padding-inline: 2.4rem;
+    z-index: 400;
+}
+
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img{
+    width: 100px;
+}
+
+.navbar{
+    position: absolute;
+    top: 100px;
+    right: 30px;
+    background-color: var(--international-orange-engineering);
+    min-width: max-content;
+    padding: 1rem;
+    width: 30%;
+
+    transform: translateY(20px);
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s var(--cubic-out);
+    z-index: 200;
+    text-align: center;
+}
+.navbar.active{
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    transition: all .8s;
+}
+
+.navbar_link{
+    font-family: var(--ff-chakra-petch);
+    font-weight: 900;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: var(--white);
+    padding: .8rem 0;
+    transition: all .5s ease;
+}
+.navbar_link:is(:hover,:focus-visible){
+    background: var(--white);
+    color: var(--international-orange-engineering);
+}
+
+.nav_toggle_icon{
+    background: var(--white);
+    width: 30px;
+    height: 2px;
+    transition: all .4s ease;
+    margin: 0;
+}
+.nav_toggle_btn{
+    height: 22px;
+    width: 30px;
+    position: relative;
+}
+.nav_toggle_icon:not(:last-child){
+    margin-block-end: 7px;
+}
+.nav_toggle_btn.active .icon_2{
+    opacity: 0;
+    transform: translateX(-10px);
+}
+.nav_toggle_btn.active .icon_1{
+    transform: rotate(-40deg);
+    position: absolute;
+    top: 10px;
+}
+.nav_toggle_btn.active .icon_3{
+    transform: rotate(40deg) ;
+    position: absolute;
+    top: 10px; ;
+}
+
+
+
+/*-----------------------------------*\
+    #HERO
+\*-----------------------------------*/
+
+.hero{
+    
+}
+
+
+
+/*-----------------------------------*\
+    #SERVICE
 \*-----------------------------------*/
 
 
@@ -50,7 +262,7 @@
 
 
 /*-----------------------------------*\
-  #SERVICE
+    #ABOUT
 \*-----------------------------------*/
 
 
@@ -58,7 +270,7 @@
 
 
 /*-----------------------------------*\
-  #ABOUT
+    #WORK
 \*-----------------------------------*/
 
 
@@ -66,7 +278,7 @@
 
 
 /*-----------------------------------*\
-  #WORK
+    #FOOTER
 \*-----------------------------------*/
 
 
@@ -74,13 +286,5 @@
 
 
 /*-----------------------------------*\
-  #FOOTER
-\*-----------------------------------*/
-
-
-
-
-
-/*-----------------------------------*\
-  #MEDIA QUERIES
+    #MEDIA QUERIES
 \*-----------------------------------*/
