@@ -170,6 +170,9 @@ section{
     padding-top: 4rem;
 }
 
+.w-100{
+    width: 100%;
+}
 .btn{
     background: var(--international-orange-engineering);
     color: #fff;
@@ -379,10 +382,42 @@ section{
     #ABOUT
 \*-----------------------------------*/
 
-
-
-
-
+.about{
+    background: var(--space-cadet);
+    color: #fff;
+    text-align: center;
+}
+.about .container{
+    display: grid;
+    gap: 3rem;
+}
+.about .section_title{
+    color: #fff;
+}
+.about .section_txt:nth-child(3){
+    margin: 12px 0 8px 0;
+}
+.about_list{
+    display: grid;
+    gap: 1.7rem;
+    margin-top: 1.48rem;
+}
+.about_item{
+    background: var(--oxford-blue-2);
+    padding: 3rem 1.1rem;
+    transition: all .5s ease;
+    margin-bottom: .5rem; 
+}
+.about_item:hover{
+    background: var(--international-orange-engineering);
+    transform: translateY(-8px);
+}
+.about_item .strong{
+    display: block;
+    font-family: var(--ff-chakra-petch);
+    font-size: 3.5rem;
+    line-height: 1.1;
+}
 /*-----------------------------------*\
     #WORK
 \*-----------------------------------*/
