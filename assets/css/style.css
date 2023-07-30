@@ -166,6 +166,9 @@ h2{
 h3{
     font-size: 1.8rem;
 }
+section{
+    padding-top: 4rem;
+}
 
 .btn{
     background: var(--international-orange-engineering);
@@ -185,6 +188,12 @@ h3{
 .btn:is(:hover,:focus-visible){
     background: var(--oxford-blue-3);
     border-color: #fff;
+}
+.btn_link{
+    font-family: var(--ff-chakra-petch);
+    text-transform: uppercase;
+    color: var(--international-orange-engineering);
+    font-weight: 700;
 }
 
 .move_anim{
@@ -342,9 +351,29 @@ h3{
     #SERVICE
 \*-----------------------------------*/
 
+.service_banner{
+    display: none;
+}
+.service{
+    text-align: center;
+}
+.service_list{
+    gap: 0;
+    margin-bottom: 20px;
+}
 
-
-
+.service_card .card_icon{
+    max-width: max-content;
+    margin-inline: auto;
+    margin-bottom: 20px;
+}
+.service_card .card_txt{
+    line-height: 1.2;
+    margin:8px 0 ;
+}
+.service .btn{
+    margin : auto;
+}
 
 /*-----------------------------------*\
     #ABOUT

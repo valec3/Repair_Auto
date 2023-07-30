@@ -31,11 +31,11 @@
             </a>
             <nav class="navbar" data-navbar>
                 <ul class="navbar_list">
-                    <li><a href="#" class="navbar_link">Inicio</a></li>
-                    <li><a href="#" class="navbar_link">Acerca de</a></li>
-                    <li><a href="#" class="navbar_link">servicios</a></li>
-                    <li><a href="#" class="navbar_link">Proyectos</a></li>
-                    <li><a href="#" class="navbar_link">Contacto</a></li>
+                    <li><a href="#home" class="navbar_link">Inicio</a></li>
+                    <li><a href="#about" class="navbar_link">Acerca de</a></li>
+                    <li><a href="#services" class="navbar_link">servicios</a></li>
+                    <li><a href="#projects" class="navbar_link">Proyectos</a></li>
+                    <li><a href="#contact" class="navbar_link">Contacto</a></li>
                 </ul>
             </nav>
             <a href="#" class="btn btn_primary">
@@ -54,21 +54,90 @@
     <main>
         <article>
             <section class="hero has-bg-image" style="background-image: url('./assets/images/hero-bg.jpg')"">
-            <div class="container">
-                <div class="hero_content">
-                    <p class="section_subtitle :dark">Tenemos ingenieros y mecánicos talentosos</p>
-                    <h1 class="section_title">Servicio de Mantenimiento y Reparación de Autos</h1>
-                    <p class="section_txt">Duis aute irure dolor in reprehenderit in voluptate velit esse Excepteur sint occaecat cupidatat non proident.</p>
+                <div class="container">
+                    <div class="hero_content">
+                        <p class="section_subtitle :dark">Tenemos ingenieros y mecánicos calificados</p>
+                        <h1 class="section_title">Servicio de Mantenimiento y Reparación de Autos</h1>
+                        <p class="section_txt">Ofrecemos servicios de calidad y utilizamos piezas originales. ¡Agenda tu cita hoy mismo!</p>
+                        <a href="#" class="btn">
+                            <span class="span">Nuestros servicios</span>
+                            <span class="material-symbols-rounded">arrow_forward</span>
+                        </a>
+
+                    </div>
+                    <figure class="hero_banner">
+                        <img src="./assets/images/hero-banner.png" alt="auto rojo" width="1228" height="789" class="move_anim">
+                    </figure>
+                </div>
+            </section>
+
+            <!-- service section starts  -->
+            <section class="service has_bg_image" style="background-image: url('./assets/images/service-bg.jpg');">
+                <div class="container">
+                    <p class="section_subtitle :light" id="service-label">
+                        Nuestro servicios
+                    </p>
+                    <h2 class="section_title">Ofrecemos excelentes servicios para su vehículo.</h2>
+                    <ul class="service_list">
+                        <li> 
+                            <div class="service_card">
+                                <figure class="card_icon">
+                                    <img src="./assets/images/services-1.png" width="110" height="110" loading="lazy" alt="Reparación del motor">
+                                </figure>
+                                <h3 class="card_title">Reparación del motor</h3>
+                                <p class="card_txt">Especialistas en reparaciones de motores, potencia y rendimiento garantizados.</p>
+                                <a href="#" class="btn_link">Leer mas</a>
+                            </div>
+                        </li>
+                        <li> 
+                            <div class="service_card">
+                                <figure class="card_icon">
+                                    <img src="./assets/images/services-2.png" width="110" height="110" loading="lazy" alt="Reparación de frenos">
+                                </figure>
+                                <h3 class="card_title">Reparación de frenos</h3>
+                                <p class="card_txt">Solucionamos problemas de frenado para garantizar su seguridad.</p>
+                                <a href="#" class="btn_link">Leer mas</a>
+                            </div>
+                        </li>
+                        <li> 
+                            <div class="service_card">
+                                <figure class="card_icon">
+                                    <img src="./assets/images/services-3.png" width="110" height="110" loading="lazy" alt="Reparación de llantas">
+                                </figure>
+                                <h3 class="card_title">Reparación de llantas</h3>
+                                <p class="card_txt">Expertos en arreglos y reemplazos para un manejo suave.</p>
+                                <a href="#" class="btn_link">Leer mas</a>
+                            </div>
+                        </li>
+                        <li> 
+                            <div class="service_card">
+                                <figure class="card_icon">
+                                    <img src="./assets/images/services-4.png" width="110" height="110" loading="lazy" alt="Reparación de baterías">
+                                </figure>
+                                <h3 class="card_title">Reparación de baterías</h3>
+                                <p class="card_txt">Servicios confiables para mantener su vehículo en funcionamiento.</p>
+                                <a href="#" class="btn_link">Leer mas</a>
+                            </div>
+                        </li>
+                        <li class="service_banner">
+                            <img src="./assets/images/services-5.png" width="646" height="380" alt="auto rojo" class="move_anim">
+                        </li>
+                        <li > 
+                            <div class="service_card">
+                                <figure class="card_icon">
+                                    <img src="./assets/images/services-6.png" width="110" height="110" loading="lazy" alt="Reparación de frenos">
+                                </figure>
+                                <h3 class="card_title">Reparación de dirección</h3>
+                                <p class="card_txt">Corregimos problemas de dirección para una conducción segura y estable.</p>
+                                <a href="#" class="btn_link">Leer mas</a>
+                            </div>
+                        </li>
+                    </ul>
                     <a href="#" class="btn">
-                        <span class="span">Nuestros servicios</span>
+                        <span class="span">Ver todos los servicios</span>
                         <span class="material-symbols-rounded">arrow_forward</span>
                     </a>
-
                 </div>
-                <figure class="hero_banner">
-                    <img src="./assets/images/hero-banner.png" alt="hero" width="1228" height="789" class="move_anim">
-                </figure>
-            </div>
             </section>
         </article>
     </main>
