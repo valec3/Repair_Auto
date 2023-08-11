@@ -74,8 +74,6 @@ body{
     font-size: 1.6rem;
     line-height: 1.5;
     background-color: var(--eerie-black);
-
-    height: 1800vh;
 }
 
 :focus-visible{
@@ -469,7 +467,9 @@ section{
 /*-----------------------------------*\
     #WORK
 \*-----------------------------------*/
-
+.work{
+    padding-bottom: 3rem;
+}
 .work .container{
     padding-inline: 0;
     padding: 0 2rem;
@@ -520,10 +520,101 @@ section{
     #FOOTER
 \*-----------------------------------*/
 
+.footer{
+    color: var(--cadet-blue-creyola);
+}
+.footer .shape{
+    display: none;
+}
+.footer_top{
+    background-color: var(--space-cadet);
+    padding: 3rem 0;
+}
+.footer .container{
+    display: grid;
+    gap: 3rem;
+}
+.footer_text{
+    margin: 1rem 1.2rem;
+}
 
+.social_list{
+    display: flex;
+    gap: 8px;
+}
+.social_link{
+    background-color: var(--oxford-blue-3);
+    padding: 14px;
+    border-radius: 50%;
+    transition: transform .2s ease;
+}
+.social_link:is(:hover, :focus-visible){
+    background-color: var(--international-orange-engineering);
+    transform: translateY(-5px);
+}
+.footer_list{
+    display: flex;
+    flex-direction: column;
+    gap: 8px    ;
+}
+.footer_list h3{
+    color: var(--white);
+    margin: 1rem 0;
+}
+.footer_list p{
+    color: #fff;
+    font-weight: 400;
+    margin: 7px 0;
+}
+.footer_link{
+    display: flex;
+    align-items: center;
+    gap: 1rem   ;
+}
+.footer_link:is(:hover,:focus-visible){
+    color: var(--international-orange-engineering);
+}
+.footer_link .material-symbols-rounded{
+    flex-shrink: 0;
+    font-size: 18px;
+    color: var(--international-orange-engineering);
+}
 
+.footer_bottom{
+    background: var(--oxford-blue-1);
+    padding: 20px 0;
+}
 
+.footer .copyright{
+    padding:  1rem;
+    text-align: center;
+    font-size: 1.3rem;
+}
 
 /*-----------------------------------*\
     #MEDIA QUERIES
 \*-----------------------------------*/
+
+
+@media (min-width: 575px){
+
+    .container{
+        max-width: 540px;
+        width: 100%;
+        margin-inline:auto ;
+    }
+    .section_subtitle{
+        font-size: 1.6rem;
+    }
+    h2{
+        font-weight: 700;
+    }
+    .hero .container{
+        max-width: 520px;
+        margin-inline: auto;
+    }
+
+    .hero .section_txt{
+        font-size: 1.8rem;
+    }
+}
