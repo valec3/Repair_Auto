@@ -221,7 +221,7 @@ section{
     width: fit-content;
     font-family: var(--ff-chakra-petch);
     font-weight: 600;
-    padding:  1rem;
+    padding:  1rem 2rem;
     text-transform: uppercase;
     display: flex;
     align-items: center;
@@ -229,6 +229,7 @@ section{
     border: solid transparent 1px;
     transition: .5s;
     will-change: transform;
+    border-radius: 2rem;
 }
 .btn:is(:hover,:focus-visible){
     background: var(--oxford-blue-3);
@@ -590,12 +591,18 @@ section{
     text-align: center;
     font-size: 1.3rem;
 }
-
+.footer .logo{
+    display: flex;
+    padding-left:1rem;
+    justify-content: flex-start;
+}
 /*-----------------------------------*\
     #MEDIA QUERIES
 \*-----------------------------------*/
-
-
+.work .card_content{
+    min-height: 200px;
+}
+/* responsive for large than 575px */
 @media (min-width: 575px){
 
     .container{
@@ -616,5 +623,321 @@ section{
 
     .hero .section_txt{
         font-size: 1.8rem;
+    }
+
+    .service .section_title{
+        margin-block-end: 2rem;
+    }
+    .service_list{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+
+
+    .about_list{
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+    }
+
+    .work .scrollbar_item{
+        min-width: 50%;
+    }
+
+
+    .footer_top{
+        position: relative;
+        overflow: hidden;
+    }
+    .footer .container{
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .footer .shape_3{
+        display: block;
+        position: absolute;
+        bottom: .30px;
+        right: 0;
+    }
+}
+
+@media (min-width: 768px){
+    h1{
+        font-size: 4.5rem;
+    }
+    .hero .container,
+    .container,
+    .hero .hero_content{
+        max-width: 720px;
+    }
+    .section_subtitle{
+        font-size:1.8rem ;
+    }
+    .hero .btn{
+        margin-top: 2.85rem;
+        margin-bottom: 2.85rem;
+    }
+
+    .footer_top .container{
+        grid-template-columns: 1fr .9fr .9fr;
+    }
+
+    .copyright{
+        font-size: 1.5rem;
+    }
+    .footer_bottom{
+        padding: .8rem 0;
+    }
+}
+
+@media (min-width: 992px){
+    .container{
+        max-width: 960px;
+    }   
+    .section_txt,
+    .card_txt{
+        font-size: 1.8rem;
+    }
+    .nav_toggle_btn{
+        display: none;
+    }
+    .navbar{
+        position: relative;
+        opacity: 1;
+        left: 0;
+        bottom: 0;
+        transform: none;
+        top: 0;
+        right: 0;
+        visibility: visible;
+        background-color: transparent;
+    }
+    .navbar.active{
+        all: unset;
+        display: block;
+    }
+    .navbar .navbar_list{
+        display: flex;
+        gap: 1rem;
+    }
+    .navbar_link{
+        position: relative;
+        font-size: unset;
+        background: transparent;
+    }
+    .navbar_link::after{
+        position: absolute;
+        content: "";
+        height: 2px;
+        background-color: #fff;
+        width: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .navbar_link:is(:hover,:focus-visible)::after{
+        width: 100%;
+    }
+    .navbar_link:is(:hover,:focus-visible){
+        background: none;
+        color: var(--international-orange-engineering);
+    }
+    .header .container {
+        display: flex;
+        align-items: center;
+    }
+    .header .btn{
+        display: flex;
+        padding: 1rem;
+        
+        font-size: 1.5rem;
+    }
+
+    .hero{
+        text-align: left;
+        padding-bottom: 80px;
+    }
+    .hero .container{
+        max-width: 960px;
+        grid-template-columns: 1fr 1fr;
+    }
+    .hero .section_title,
+    .hero .section_subtitle{
+        margin-left: 0;
+        text-align: left;
+    }
+    .hero .btn{
+        margin-left:0 ;
+    }
+    .hero_banner img{
+        width: 55%;
+    }
+    .service_banner{
+        display: block;
+        position: relative;
+    }
+    .service_list{
+        grid-template-columns: repeat(3,1fr);
+        gap: 4rem;
+    }
+    .service .btn{
+        margin-top: 10rem;
+    }
+    .service_banner img{
+        position: absolute;
+        top: 0;
+        left: -25%;
+        margin-top: 15%;
+        width: 150%;
+        transform-origin:top ;
+    }
+    .service_card .card_txt{
+        padding-inline:1.6rem ;
+    }
+
+    .service_list li:nth-child(-2n+3){
+        margin-top: 90px;
+    }
+    .service_list li:nth-child(4){
+        margin-top: 60px;
+    }
+    .service_list li:nth-child(6){
+        margin-top: 60px;
+    }
+    .service_banner img{
+        left: -40%;
+        margin-top:-20% ;
+        width: 180%;
+    }
+
+    .about{
+        position: relative;
+        z-index: 1;
+    }
+
+    .about,
+    .about .section_title{
+        text-align: left;
+    }
+    .about .container{
+        grid-template-columns: 1fr .75fr;
+        gap: 2rem;
+    }
+    .about_banner{
+        position: relative;
+        width: 40%;
+        margin-left: auto;
+    }
+    .about::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background-image: url(../images/about-abs-banner.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right;
+        z-index: -1;
+    }
+
+    .has_scrollbar{
+        overflow: visible;
+    }
+
+    .work .scrollbar_item{
+        min-width: 33%;
+    }
+}
+
+@media (min-width: 1200px){
+    .container,
+    .hero .container{
+        max-width: 1190px;
+    }
+    h1{
+        font-size: 5rem;
+    }
+    .hero {
+        padding: 270px 0 200px;
+    }
+
+    .hero .container{
+        grid-template-columns: 1fr 0.9fr;
+
+    }
+    .hero .section_txt{
+        font-size: 2rem;
+        padding-bottom: 5rem;
+    }
+    .hero_banner img{
+        padding-bottom: 10rem;
+        width: 60%;
+    }
+    .service_list{
+        gap: 8rem;
+    }
+
+    .service .section_title{
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    .service_banner img{
+        width: max-content;
+        left: -47%;
+    }
+    .work_card .card_btn{
+        font-size: 2rem;
+        width: 55px;
+        height: 55px;
+    }
+
+    .footer_top {
+        padding: 150px 0;
+    }
+
+    .footer_top .container{
+        padding: 0 5rem 5rem 25rem;
+    }
+    .footer_bottom{
+        position: relative;
+        padding: 30px 0;
+        z-index: 1;
+    }
+    .footer :is(.shape_1, .shape_2){
+        position: absolute;
+        display: block;
+        bottom: 0;
+        width: 50%;
+        pointer-events: none;
+        z-index: -1;
+    }
+    .footer .shape_1{
+        left: -100px;
+    }
+    .footer .shape_2{
+        left: -50px;
+    }
+}
+
+@media (min-width: 1400px){
+    .container{
+        max-width: 1390px;
+    }
+    .service_banner img{
+        width: 180%;
+        left: -40%;
+    }
+    .header .btn{
+        padding: 1.3rem 2.6rem;
+    }
+    .btn:hover span.material-symbols-rounded{
+        transform: translateX(10px);
+        transition: all .3s ease-in-out;
+    }
+    .footer_top .container{
+        padding-left: 40rem;
     }
 }
